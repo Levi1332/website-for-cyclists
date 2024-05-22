@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О разработчике</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #4CAF50;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+}
+
+.about {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.developer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+</style>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">МойСайт</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                
+                <li><a href="index.html #footer_table">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="about">
+            <div class="container">
+                <img src="2024-05-17_11-40-37.png" alt="Фото разработчика" class="developer-photo">
+                 <div class="about-text">
+                    <h1>Привет! Я студент 3 курса БТК</h1>
+                    <p>Я учусь на 3 курсе в БТК. С увлечением изучаю программирование и веб-разработку. В процессе обучения я освоил различные технологии и инструменты, такие как HTML, CSS, JavaScript и Python.</p>
+                    <p>Мне нравится работать над интересными проектами, решать сложные задачи и создавать эффективные и удобные веб-приложения. Я всегда стремлюсь к совершенству и стараюсь использовать лучшие практики разработки в своей работе.</p>
+                    <p>Когда у меня есть свободное время, я занимаюсь спортом, читаю научную литературу и провожу время с друзьями. Если у вас есть вопросы или вы хотите узнать больше о моих проектах, не стесняйтесь связаться со мной!</p>
+                    <a href="index.html #footer_table" class="contact-button">Связаться со мной</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 МойСайт. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

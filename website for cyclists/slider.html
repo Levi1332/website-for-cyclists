@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер на сайте</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        .navigation button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Слайдер</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="slide1.jpg" alt="Слайд 1">
+                <img src="slide2.jpg" alt="Слайд 2">
+                <img src="slide3.jpg" alt="Слайд 3">
+            </div>
+            <div class="navigation">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides img');
+        const totalSlides = slides.length;
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            showSlides(slideIndex -= 1);
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            showSlides(slideIndex += 1);
+        });
+
+        function showSlides(n) {
+            if (n >= totalSlides) slideIndex = 0;
+            if (n < 0) slideIndex = totalSlides - 1;
+
+            const offset = -slideIndex * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>

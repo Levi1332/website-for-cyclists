@@ -1,0 +1,266 @@
+<!doctype html>
+<!--Давидович Георгий Сергеевич  -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Лясики.ru</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=42dbdc92-59ba-4215-91ea-d7f339df00ec"></script>
+    <script>
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [53.132914, 26.021819],
+                zoom: 15
+            });
+
+            var myPlacemark = new ymaps.Placemark([53.132914, 26.021819], {
+                hintContent: 'Наш Колледж',
+                balloonContent: 'ул. Ленина, 5, Барановичи, Беларусь'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+
+        ymaps.ready(init);
+    </script>
+    <script>
+        function readAloud() {
+            var text = document.getElementById("main").innerText;
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'ru-RU';
+            window.speechSynthesis.speak(speech);
+        }
+
+        function stopReading() {
+            window.speechSynthesis.cancel();
+        }
+    </script>
+  
+
+</head>
+<body>
+    <div class="header">
+        <div id="f_menu_d">
+            <ul id="f_menu">
+                <li><a href="#f_column">Выбор велосипеда</a></li>		
+                <li><a href="#f_column1">Настройка велосипеда</a></li>			
+                <li><a href="#s_column">Популярные компании</a></li>
+                <li><a href ="#copyright">Наши контакты</a></li>
+                <li><a href = "number2.html">Полезные советы </a></li>
+                <li><a href = "history.html">История</a></li>
+                <li><a href = "error 404.html">404</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="read-aloud" onclick="readAloud()">Прочитать</button>
+        <button class="stop-reading" onclick="stopReading()">Прекратить чтение</button>
+    </div>
+    <div id="main" class="main">
+        <table id="text-table">
+            <tr>
+                <td id="f_column">
+                    <h2>Как правильно выбрать велосипед</h2>
+                    <h3>Ростовка</h3>
+                    <p>
+                        Уделите минуту времени и точно измерьте свой рост без обуви. Свой действительный рост важно знать, чтобы правильно выбрать велосипед с учетом его ростовки. Бывают случаи, когда люди называют его с ошибкой аж до 10 см.
+
+                        Ростовка – это размеры рам велосипедов в дюймах, сантиметрах или записанные в условных обозначениях. Рамы больших размеров (L, XL, XXL) собираются из более толстостенных труб, чтобы выдержать большой вес более высокого велосипедиста. Байк меньшего размера имеет вес в среднем на 150-200 грамм меньший, чем у соседней, большей, ростовки. Велосипед с маленькой рамой более манёвренный и его легче удержать в вертикальном положении, чем машину с огромной рамой. На моделях с большой рамой можно занять идеальное положение, чтобы развить максимальную скорость.
+                    </p>
+                    <h3>Размерные сетки производителя</h3>
+                    <p>
+                        Размерные сетки производителя
+                        В первую очередь, делая выбор велосипеда, нужно смотреть на размерную сетку конкретной фирмы. Такие таблицы должен составить производитель велосипедов. Часто нужную информацию можно найти при поиске в интернет-магазинах. Если такой информации производитель не предоставил, тогда можно выбрать велосипед по универсальной сетке.
+                    </p>
+                    <br>
+                    <center>
+                        <img src="razmer setka.png" class="pch1">
+                    </center>
+                    <h3>Испытательная поездка</h3>
+                    <p>
+                        Если есть возможность прокатиться на понравившемся велосипеде, обязательно испробуйте новую машину. При покупке на рынке или в магазине, установите байк между ногами, коснувшись спиной носика седла. В таком положении между вашим пахом и рамой должно быть свободного пространства не менее 10 см, то есть приблизительно на ширину ладони. Кататься на велосипеде со слишком высокой рамой опасно, так как в случае опасности, вы спрыгните, не раздумывая, с седла и ударитесь промежностью об верхнюю трубу рамы.
+                    </p>
+                    <h3>Велосипед для ребенка</h3>
+                    <p>
+                        Дети растут быстро, и многие родители хотят купить велосипед на вырост. Однако усаживать малыша на большой велосипед травмоопасно. Ребёнок будет ёрзать по сиденью, пытаясь достать до педалей, и может упасть или удариться об высокую раму. Кроме того на модели для более взрослых детей устанавливают большие тормозные ручки. Катаясь на таком серьезном транспорте, ваш ребенок может не дотянуться до рычагов или у него не хватит силы, чтобы нажать их. И когда нужно будет избежать столкновения, малыш не сможет остановиться.
+                    </p>
+                    <center>
+                        <img src="dedok.jpg" class="pch2">
+                    </center>
+                </td>
+                <td id="f_column1">
+                    <h2>Важные моменты по настройке велосипедов</h2>
+                    <h3>Настройки параметров дорожных и шоссейных велосипедов</h3>
+                    <p>
+                        В магазинах велосипеды обычно имеют стандартные настройки, под «среднего» человека. После покупки попробуйте сразу сесть и прокатиться. Так определите, надо ли вообще что-то регулировать. Основные параметры, влияющие на удобство катания, – это взаиморасположение седла и руля. Первым настраивается высота и угол наклона седла к раме.
+                        Распространенный метод определения оптимальной высоты седла – это «положение стоячей ноги». Определяем по алгоритму:
+                    </p>
+                    <p>1. Одна педаль переводится в верхнее положение, другая – в крайнее нижнее.</p>
+                    <p>2. Встаем на землю, рама между ног.</p>
+                    <p>3. Нога, которая касается нижней педали, должна быть почти выпрямлена.</p>
+                    <p>
+                        Если она слишком согнута или едва касается педали, то высота седла увеличивается или уменьшается, соответственно. Почему нужно обеспечить правильное положение ног при педалировании? В первую очередь снизится усталость мышц и коленного сустава, что позволит преодолевать расстояния без перерывов. Эффективность крутящего момента также будет выше за счет большего «плеча» силы. Правда, не стоит доводить ногу до идеально выпрямленной, иначе вращать педали будет трудно.
+
+                        Что касается дорожных велосипедов, то снизится еще и эффективность торможения «педалями назад». Диапазон высот должен варьироваться в пределах отметок «min» и «max». Подседельный штырь, вытащенный дальше безопасной отметки, может сыграть злую шутку в поездках!
+                    </p>
+                    <center>
+                        <img src="polet.jpg" class="pch3">
+                    </center>
+                </td>
+                <td id="s_column">
+                    <h2>Популярные велобренды</h2>
+                    <p>Specialized</p>
+                    <p>Cannondale</p>
+                    <p>Santa Cruz</p>
+                    <p>Merida</p>
+                    <p>KONA</p>
+                    <p>CUBE</p>
+                    <p>GT</p>
+                    <p>SCOTT</p>
+                    <p>Pinarello</p>
+					<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="velik1.jpg" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="velik2.jpg" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="velik3.jpeg" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+    <div class="mySlides fade">
+        <img src="vilik4.jfif" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+    <div class="mySlides fade">
+        <img src="velik5.jfif" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+    <div class="mySlides fade">
+        <img src="velik6.jfif" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+	<div class="mySlides fade">
+        <img src="velik7.jpg" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+    <div class="mySlides fade">
+        <img src="velik8.jpeg" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+	<div class="mySlides fade">
+        <img src="velik9.jfif" class="slideshow-image" style="width:80%; height:200px;">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+
+<script>
+    let slideIndex = 1;
+    let slideInterval;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        clearInterval(slideInterval);
+        showSlides(slideIndex += n);
+        slideInterval = setInterval(function() { showSlides(slideIndex += 1); }, 9000);
+		}
+		function currentSlide(n) {
+        clearInterval(slideInterval);
+        showSlides(slideIndex = n);
+        slideInterval = setInterval(function() { showSlides(slideIndex += 1); }, 9000); 
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+
+    slideInterval = setInterval(function() { showSlides(slideIndex += 1); }, 9000);
+</script>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<br></br>
+		</td>
+		</tr>
+		
+			</table>
+		</div>
+		<div class "textmap">
+		<div id = "textmap">
+		 <h1>Наш Колледж</h1>
+    <p>Адрес: ул. Ленина, 5, Барановичи, Беларусь</p>
+	</div>
+	</div>
+
+    <div id="map"></div>
+		<div class="footer">
+			<table id="footer_table">
+				<tr>
+					<h2>Наши контакты</h2>
+		<div class="image-with-text">
+    <img src="МТС.png" class="pch4">
+    <p>MTC +111(11)111-11-11</p>
+	
+</div>
+<div class="image-with-text">
+		<img src="life.png" class="pch5">
+	<p> Life +222(22)222-22-22</p>
+	</div>
+		<a href="https://www.instagram.com/georgidavidovic/" style="--color: #E1306C" class="instagram-link">
+                        <img src="pngegg.png" alt="Иконка Instagram" class="instagram-icon">
+                   instagram </a>
+				   <a href="https://t.me/smaile1332" style="--color: #E1306C" class="telegram-link">
+                        <img src="telegram.png" alt="Иконка telegram" class="telegram-icon">
+                   telegram </a>
+				    <a href="https://bartc.by/" style="--color: #E1306C" class="BTK-link">
+                        <img src="btk.png" alt="Иконка BTK" class="telegram-icon">
+                   BTK </a>
+				    <a href="Feedback.html" style="--color: #E1306C" class="Feedback-link">
+                        <img src="feedbackimage.png" alt="Иконка Feedback" class="telegram-icon">
+                   Обратная связь </a>
+				   <br></br>
+				  <a href="Politika_konfidencialnosti.pdf">Политика конфидециальности</a>
+				   <div class="copyright">
+        <div id="copyright">
+            <p>Copyright © 2024 <a href="about the development.html">Давидович Георгий Сергеевич</a></p>
+        </div>
+    </div>
+    <div class="auth-menu">
+        <div id="auth-menu">
+            <a href="avtorization.html" class="auth-button">Войти</a>
+        </div>
+    </div>
+				<tr>
+			</table>
+		</div>
+		
+	</body>
+
+</html>

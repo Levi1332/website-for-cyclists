@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+ 
+ <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+	  background-image: url("velic2.png"); 
+ 
+  background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 100px; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Имя пользователя" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="avtorization.html">Войти</a></p>
+    </div>
+
+    <script src="script.js"></script>
+	
+</body>
+</html>
